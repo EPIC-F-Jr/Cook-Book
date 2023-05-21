@@ -27,8 +27,7 @@ class Program
                 Ingrediant ingrediant = new Ingrediant();
                 ingrediant.IngrediantCapture();
                 Console.WriteLine("New ingrediant created!");
-                Application.Restart();
-                Process.GetCurrentProcess().Kill();
+                Main(args);
                 break;
             case "2":
                 Console.WriteLine("Display Recipe selected");

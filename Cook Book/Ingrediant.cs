@@ -13,7 +13,6 @@ namespace Cook_Book
     {
         public void IngrediantCapture()
         {
-
             // Prompt the user to enter the number of ingredients.
             Console.WriteLine("Enter the number of ingredients:");
 

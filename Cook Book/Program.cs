@@ -2,12 +2,16 @@
 using System;
 using static System.Net.Mime.MediaTypeNames;
 using System.Diagnostics;
-
+ 
+// Initialize ingredianr delegate.
+delegate void IngredientDelegate(string name, int quantity, string unit);
 class Program
 {
     static void Main(string[] args)
     {
-        // Display menu options
+
+    
+    // Display menu options
         Console.WriteLine("Select an option:");
         Console.WriteLine("1. New Recipe.");
         Console.WriteLine("2. Display Recipe.");
@@ -30,11 +34,17 @@ class Program
                 Main(args);
                 break;
             case "2":
-                Console.WriteLine("Display Recipe selected");
+                IngredientDelegate ingredientDelegate = new IngredientDelegate(DisplayIngredient);
+                ingredientDelegate("Sugar", 2, "cups");
+                // Method for Option 2: Display Ingrediant delagate.
+                static void DisplayIngredient(string name, int quantity, string unit)
+                {
+                    Console.WriteLine("{0} {1} {2}", name, quantity, unit);
+                }
+                Main(args);
                 break;
             case "3":
                 Console.WriteLine("Change Serving Size selected");
-                ingrediant.DisplayIngredient();.
                 break;
             case "4":
                 Console.WriteLine("Reset Scale selected");

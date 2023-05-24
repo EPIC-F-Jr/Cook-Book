@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-// Initialize ingredianr delegate.
-delegate void IngredientDelegate(string name, int quantity, string unit);
 
 namespace Cook_Book
 {
     class Ingrediant
-
     {
+
         public void IngrediantCapture()
         {
             // Prompt the user to enter the number of ingredients.
@@ -71,10 +69,6 @@ namespace Cook_Book
 
         // Method that prints out all of the ingredients in a recipe.
         static void PrintIngredient(string name, int quantity, string unit)
-        {
-            Console.WriteLine("{0} {1} {2}", name, quantity, unit);
-        }
-        static void DisplayIngredient(string name, int quantity, string unit)
         {
             Console.WriteLine("{0} {1} {2}", name, quantity, unit);
         }

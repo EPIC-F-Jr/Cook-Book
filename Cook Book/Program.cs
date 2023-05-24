@@ -18,13 +18,13 @@ class Program
 
         // Read user input
         string input = Console.ReadLine();
+        Ingrediant ingrediant = new Ingrediant();
 
         // Process user input using switch statement
         switch (input)
         {
             case "1":
                 Console.WriteLine("New Recipe selected");
-                Ingrediant ingrediant = new Ingrediant();
                 ingrediant.IngrediantCapture();
                 Console.WriteLine("New ingrediant created!");
                 Main(args);
@@ -34,6 +34,7 @@ class Program
                 break;
             case "3":
                 Console.WriteLine("Change Serving Size selected");
+                ingrediant.DisplayIngredient();.
                 break;
             case "4":
                 Console.WriteLine("Reset Scale selected");

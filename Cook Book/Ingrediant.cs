@@ -72,6 +72,11 @@ namespace Cook_Book
         // Method that prints out all of the ingredients in a recipe.
         static void PrintIngredient(string name, int quantity, string unit)
         {
+            Console.WriteLine("{0} {1} {2}", name, quantity, unit);
+        }
+        static void DisplayIngredient(string name, int quantity, string unit)
+        {
+            Console.WriteLine("{0} {1} {2}", name, quantity, unit);
         }
     }
 }

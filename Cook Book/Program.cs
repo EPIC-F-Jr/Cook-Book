@@ -1,8 +1,7 @@
 ﻿using Cook_Book;
 using System;
-using static System.Net.Mime.MediaTypeNames;
+using static System.Net.Mime.MediaTypeNames; 
 using System.Diagnostics;
- 
 // Initialize ingredianr delegate.
 delegate void IngredientDelegate(string name, int quantity, string unit);
 class Program
@@ -10,8 +9,8 @@ class Program
     static void Main(string[] args)
     {
 
-    
-    // Display menu options
+
+        // Display menu options
         Console.WriteLine("Select an option:");
         Console.WriteLine("1. New Recipe.");
         Console.WriteLine("2. Display Recipe.");
@@ -48,12 +47,26 @@ class Program
                 break;
             case "4":
                 Console.WriteLine("Reset Scale selected");
+                // Reset the delegate values
+                static void ResetValues(string name, int quantity, string unit)
+                {
+                // Reset the values here
+                static void ResetValues(string name, int quantity, string unit)
+                {
+                    name = "";
+                    quantity = 0;
+                    unit = "";
+                }
+                }
                 break;
             case "5":
                 Console.WriteLine("Clear All Recipes selected");
                 break;
             case "6":
-                Console.WriteLine("Close selected");
+                Console.WriteLine("Closing application..." +
+                    "\nGoodbye." +
+                    "\n:)");
+                System.Environment.Exit(1);
                 break;
             default:
                 Console.WriteLine("Invalid selection");
